@@ -11,11 +11,11 @@ int main()
     getline(cin, s);
 
     int longest = 0;
-    int current = 0;
+    int current = 1;
 
     for (size_t i = 0; i < s.length(); i++)
     {
-        if (i == 0 || s[i] == s[i - 1])
+        if (s[i] == s[i - 1])
         {
             current++;
         }
