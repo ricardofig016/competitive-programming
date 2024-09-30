@@ -10,4 +10,4 @@ int main()
     return 0;
 }
 
-// g++ .\file.cpp ; .\a.exe
+// g++ -std=c++23 .\file.cpp ; .\a.exe
