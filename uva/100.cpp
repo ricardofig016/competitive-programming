@@ -2,20 +2,6 @@
 
 using namespace std;
 
-unsigned long long cyclelen(unsigned long long num)
-{
-    unsigned long long len = 1;
-    while (num != 1)
-    {
-        if (num % 2 == 0)
-            num /= 2;
-        else
-            num = 3 * num + 1;
-        len++;
-    }
-    return len;
-}
-
 int main()
 {
     ios::sync_with_stdio(false);
