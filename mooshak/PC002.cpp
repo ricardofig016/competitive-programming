@@ -36,18 +36,17 @@ int main()
 
     unordered_map<int, int> freqs;
 
+    int num;
+
     for (size_t i = 0; i < n; i++)
     {
-        int num;
         cin >> num;
 
         freqs[num]++;
 
-        if (freqs[num] < num)
-            toremove++;
-        else if (freqs[num] == num)
+        if (freqs[num] == num)
             toremove -= num - 1;
-        else if (freqs[num] > num)
+        else
             toremove++;
     }
 

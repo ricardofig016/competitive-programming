@@ -1,3 +1,14 @@
+/**
+ *
+ * Problem:
+ *
+ * Solution:
+ *
+ * Time complexity: O() -
+ * Space complexity: O() -
+ *
+ */
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -10,4 +21,4 @@ int main()
     return 0;
 }
 
-// g++ -std=c++23 .\file.cpp ; .\a.exe
+// g++ -Wall -std=c++23 .\file.cpp ; .\a.exe
