@@ -19,6 +19,9 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    freopen("../input.txt", "r", stdin);
+    freopen("../output.txt", "w", stdout);
+
     int n, b, sg, sb, power;
     cin >> n;
 
@@ -76,27 +79,3 @@ int main()
 
     return 0;
 }
-
-/**
-3
-5 1 1
-10
-10
-2 2 3
-20
-10
-10
-10
-15
-3 5 5
-50
-40
-30
-40
-50
-50
-30
-30
-20
-60
-*/
