@@ -4,7 +4,6 @@
  *
  * Solution:
  *
- *
  * Time complexity: O() -
  * Space complexity: O() -
  *
@@ -29,6 +28,7 @@ int main()
     {
         cin >> b >> sg >> sb;
         multiset<int> green, blue;
+        vector<int> g_insert, b_insert;
         for (int i = 0; i < sg; i++)
         {
             cin >> power;
@@ -41,6 +41,7 @@ int main()
         }
 
         while (!green.empty() && !blue.empty())
+        {
             for (int j = 0; j < b; j++)
             {
                 if (green.empty() || blue.empty())
@@ -54,10 +55,16 @@ int main()
                 blue.erase(it_blue);
 
                 if (green_power > blue_power)
-                    green.insert(green_power - blue_power);
+                    g_insert.push_back(green_power - blue_power);
                 else if (blue_power > green_power)
-                    blue.insert(blue_power - green_power);
+                    b_insert.push_back(blue_power - green_power);
             }
+
+            green.insert(g_insert.begin(), g_insert.end());
+            g_insert.clear();
+            blue.insert(b_insert.begin(), b_insert.end());
+            b_insert.clear();
+        }
 
         if (!green.empty())
         {
