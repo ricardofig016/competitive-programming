@@ -20,8 +20,8 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    // freopen("../input.txt", "r", stdin);
-    // freopen("../output.txt", "w", stdout);
+    freopen("../input.txt", "r", stdin);
+    freopen("../output.txt", "w", stdout);
 
     int t;
     cin >> t;
@@ -62,13 +62,13 @@ int main()
             }
             if (total >= f)
             {
-                // cout << "with mid = " << mid << " (low = " << l << " and high = " << h << "), the total (" << total << ") surpasses the number of people (f+1 = " << f << "), so low will be updated to mid" << endl;
+                cout << "with mid = " << mid << " (low = " << l << " and high = " << h << "), the total (" << total << ") surpasses the number of people (f+1 = " << f << "), so low will be updated to mid" << endl;
                 l = mid;
             }
             else
             {
+                cout << "with mid = " << mid << " (low = " << l << " and high = " << h << "), the total (" << total << ") does not reach the number of people (f+1 = " << f << "), so high will be updated to mid" << endl;
                 h = mid;
-                // cout << "with mid = " << mid << " (low = " << l << " and high = " << h << "), the total (" << total << ") does not reach the number of people (f+1 = " << f << "), so high will be updated to mid" << endl;
             }
         }
 
